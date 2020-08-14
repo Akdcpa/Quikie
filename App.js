@@ -130,9 +130,12 @@ class Head extends Component{
                   </TouchableOpacity>
             </View> 
             <View style={{alignItems:"center"}} >
-              <View style={{borderWidth:2 , borderColor:"#181835" , borderRadius:70}} >
-                <Image source={profile} style={{borderRadius:40 , width:80 , height:80 , margin:30}}  />
-              </View> 
+              <View style={{flexDirection:"row",alignItems:"center"}} >
+                <View style={{borderWidth:2 , borderColor:"#181835" , borderRadius:70}} >
+                  <Image source={profile} style={{borderRadius:40 , width:80 , height:80 , margin:30}}  />
+                </View> 
+                <MaterialCommunityIcons style={{marginLeft:-19}} name="camera-outline" color="white" size={30}  />
+              </View>
               <View style={{flexDirection:"column" , justifyContent:"space-evenly",width:"100%",marginTop:20}} >
                 <View  style={{flexDirection:'row',width:"100%",justifyContent:"space-between"}} >
                   <TextInput placeholder="FIRST NAME"  
@@ -184,7 +187,7 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Main" >
+        <Stack.Navigator initialRouteName="Splash" >
           <Stack.Screen name="Splash" 
                         options={{headerShown:false}} 
                         component={Splash} /> 
@@ -218,8 +221,8 @@ const styles = StyleSheet.create({
     height:60,
     borderRadius:60/2,
     borderWidth:2,
-    borderRightColor:"blue",
-    borderColor:"white"
+    // borderRightColor:"blue",
+    // borderColor:"white"
   },
   comp:{
     flexDirection:"row",
